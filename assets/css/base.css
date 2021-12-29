@@ -1,0 +1,68 @@
+:root{
+    --white-color: #fff;
+    --text-color: #333;
+    --desc-color: #999;
+    --black-color: #000;
+    --primary-color: #F5F1E6;
+    --primary-color-border: #F6E9D5;
+    --brown-color: #DCA447;
+    --blue-color: #162B75;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+}
+
+.grid {
+    width: 86%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.btn{
+    padding: 10px 16px;
+    outline: none;
+    border: none;
+    margin-bottom: 5px;
+    line-height: 2.6rem;
+    font-size: 1.4rem;
+    border-radius: 2px;
+}
+
+.col-1{
+    width: calc(100%/12);
+}
+
+.col-2{
+    width: calc(200%/12);
+}
+.col-3{
+    width: calc(300%/12);
+}
+.col-4{
+    width: calc(400%/12);
+}
+.col-5{
+    width: calc(500%/12);
+}
+.col-7{
+    width: calc(700%/12);
+}
+.col-8{
+    width: calc(800%/12);
+}
+.col-9{
+    width: calc(900%/12);
+}
+
+.active{
+    display: block!important;
+}

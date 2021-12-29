@@ -1,0 +1,1310 @@
+.container{
+
+}
+
+.header{
+    height: 70px;
+    position: fixed;
+    background-color: var(--white-color);
+    width: 100%;
+    z-index: 3;
+}
+.navbar{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin: auto;
+}
+
+.navbar__icon{
+    padding-left: 15px;
+}
+
+.menu__list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.menu__item{
+    margin: 0 20px;
+    padding: 15px 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.menu__item:hover .dropdown-menu{
+    display: block;
+}
+
+.dropdown-menu{
+    position: absolute;
+    top: calc(100% + 17px);
+    left: -20px;
+    width: 206px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    padding: 0 0 1px;
+    display: none;
+}
+
+.dropdown-menu::before {
+    content: "";
+    width: 70px;
+    height: 18px;
+    background-color: transparent;
+    position: absolute;
+    top: -17px;
+}
+
+.dropdown-menu ul{
+    padding-left: 0;
+    list-style: none;
+    padding-top: 1px;
+}
+
+.dropdown-item{
+    line-height: 0;
+    padding: 20px 20px;
+    margin: 0 0 4px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.dropdown-item:hover{
+    color: var(--white-color);
+}
+
+.dropdown-item:hover::before{
+    width: 100%;
+    left: 0;
+}
+.dropdown-item:hover::after{
+    height: 42px;
+    transition-delay: 0.4s;
+}
+
+.dropdown-item::before{
+    content: "";
+    border: 1px solid var(--brown-color);
+    border-left: 0;
+    border-right: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 40px;
+    width: 0;
+    transition: 0.4s;
+    z-index: -1;
+}
+
+.dropdown-item::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background-color: var(--brown-color);
+    transition: 0.4s;
+    transition-delay: 0s;
+    z-index: -1;
+}
+
+.menu__item:hover .menu__item--blue-color {
+    color: #1178F2;
+    cursor: pointer;
+}
+
+.menu__item:hover::after{
+   width: 100%;
+   margin-left: 0;
+}
+
+.menu__item::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    border-bottom: 3px solid var(--brown-color);
+    transition: 0.5s;
+    margin-left: 50%;
+}
+
+.menu__item:last-child::after{
+    border-bottom: none;
+}
+
+.menu__item-link{
+    text-decoration: none;
+    cursor: default;
+    color: var(--black-color);
+}
+
+.language-option{
+    display: flex;
+    align-items: center;
+}
+
+.menu__item-flag{
+    padding: 0 5px;
+    display: inline-block;
+}
+
+.navbar__vinhome-stock{
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+
+.vinhome-stock__chart-img{
+    width: 40px;
+}
+
+.vinhome-stock__info{
+    font-size: 11px;
+}
+
+.vinhome-stock__name{
+    line-height: 22px;
+}
+
+.vinhome-stock__value{
+    line-height: 22px;
+    color: #DCA447;
+    font-weight: bold;
+}
+
+
+.navbar__user-action{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    padding: 0 15px 0 30px;
+}
+
+.navbar__user{
+    cursor: pointer;
+}
+
+.content__home-banner{
+    position: relative;
+    top: 70px;
+}
+
+.content__outside-img{
+    position: relative;
+    height: 761px;
+    z-index: -1;
+    background: url(https://storage.googleapis.com/vinhomes-data-01/3_1624089856.jpg) no-repeat ;
+    background-position: 0 70px;
+    background-attachment:fixed ;
+    background-size: cover ;
+}
+
+.content__outside-img::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0.5turn , rgba(0,0,0,0.0) 50% ,rgba(0,0,0,0.5));
+}
+
+.content__text-banner{
+    color: var(--white-color);
+    position: absolute;
+    left: 50%;
+    bottom: 147px;
+    transform: translate(-50%,0);
+    height: 77px;
+    width: 100%;
+    
+}
+
+.content__text-banner h1{
+    font-size: 4rem;
+    line-height: 47px;
+    margin: 0 0 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.content__text{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 600;
+    margin: 0;
+    display: none;
+    text-align: center;
+}
+
+.content__search-banner {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    background-color: var(--white-color);
+    display: flex;
+    width: 68.5%;
+    height: 85px;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    z-index: 2;
+}
+
+.search-banner__selection--border{
+    border-right: 1px solid #ccc;
+}
+
+.search-banner__selection{
+    margin: 20px 0;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+}
+
+.search-banner__location,
+.search-banner__room-quality,
+.search-banner__cost{
+    color: #848484;
+    font-size: 1.4rem;
+    line-height: 20px;
+}
+
+.search-banner__location-icon{
+    float: right;
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+}
+
+.location-list-wrapper{
+    position: absolute;
+    border: 1px solid #aaa;
+    border-top: 0;
+    background-color: var(--white-color);
+    top: 100%;
+    left: 0;
+    border-radius: 3px;
+    display: none;
+}
+
+.location-search{
+    width: 150px;
+    padding: 4px;
+    margin: 4px 3px;
+    line-height: 20px;
+    outline: none;
+}
+
+.location-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.location-item{
+    line-height: 24px;
+    padding: 6px;
+    padding-right: 0;
+    width: 138px;
+    color: var(--text-color);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.location-item:visited{
+    background-color: red;
+}
+
+.location-item:hover{
+    background-color: #5897FB !important;
+    color: var(--white-color) !important;
+}
+
+.room-list-wrapper{
+    position: absolute;
+    border: 1px solid #aaa;
+    border-top: 0;
+    background-color: var(--white-color);
+    top: 100%;
+    left: 0;
+    border-radius: 3px;
+    display: none;
+}
+
+.room-search{
+    width: 150px;
+    padding: 4px;
+    margin: 4px 3px;
+    line-height: 20px;
+    outline: none;
+}
+
+.room-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem;
+    height: 185px;
+}
+
+.room-item{
+    line-height: 24px;
+    padding: 6px;
+    padding-right: 0;
+    width: 100%;
+    color: var(--text-color);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.room-item:visited{
+    background-color: red;
+}
+
+.room-item:hover{
+    background-color: #5897FB !important;
+    color: var(--white-color) !important;
+}
+
+.search-banner__select-location,
+.search-banner__room-number,
+.search-banner__select-cost{
+    color: var(--text-color);
+    font-size: 1.5rem;
+    line-height: 28px;
+    font-weight: 600;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* section to select expense */
+.expense-wrapper{
+    position: absolute;
+    top: calc(100% + 8px);
+    left: -20px;
+    background-color: var(--white-color);
+    width: 390px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+    border-radius: 3px;
+    display: none;
+    cursor: default;
+}
+.expense-wrapper > h3{
+    margin: 0;
+    font-size: 16px;
+}
+
+.expense-selecting{
+    position: relative;
+    height: 24px;
+    margin: 11px 0;
+}
+
+.expense-left-btn{
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #9F9F9F;
+    display: inline-block;
+    border: 4px solid #9F9F9F;
+    background-image: url('https://www.vinhomes.vn/themes/porto/img/vinhomes/ht/ion_icon.svg');
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.current-min-expense{
+    display: inline-block;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    width: 40px;
+    text-align: center;
+    transform: translateX(-50%);
+    font-size: 16px;
+}
+
+.expense-line {
+    width: 95%;
+    height: 3px;
+    background-color: #9F9F9F;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+}
+
+.expense-right-btn{
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #9F9F9F;
+    display: inline-block;
+    border: 4px solid #9F9F9F;
+    background-image: url('https://www.vinhomes.vn/themes/porto/img/vinhomes/ht/ion_icon.svg');
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    float: right;
+    cursor: pointer;
+}
+
+.current-max-expense{
+    display: inline-block;
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 50%;
+    width: 40px;
+    text-align: center;
+    transform: translateX(50%);
+    font-size: 16px;
+}
+
+.expense-action-block{
+    margin-top: 80px;
+}
+
+.expense-reset{
+    height: 38px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--desc-color);
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.expense-confirm{
+    float: right;
+    width: 200px;
+    height: 38px;
+    background-color: var(--brown-color);
+    color: var(--white-color);
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+.search-banner__selection--search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+.search-banner__selection--search-btn{
+    font-size: 16px;
+    padding: 6px 12px;
+    width: 65%;
+    height: 40px;
+    border: none;
+    color: var(--white-color);
+    background-color: #DCA447;
+    border-radius: 3px;
+}
+
+.search-banner__selection--search-btn:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.content__intro-wrapper{
+    background-color: #F5F1E6;
+}
+
+.content__intro-inner{
+    padding: 102px 0px 50px;
+}
+
+.content__intro-slogan{
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 3rem;
+    text-align: center;
+    margin: 0 120px 60px;
+    color: var(--blue-color);
+    font-family:'Times New Roman', Times, serif;
+}
+
+.content__intro-menu{
+    display: var(--white-color);
+}
+
+.content__intro-menu--wrap{
+    padding: 5px;
+    background-color: var(--white-color);
+    border-radius: 3px;
+}
+
+.intro-menu__list{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+    border: 1px solid #F4E4C7;
+    margin: 0;
+}
+
+.intro-menu__item{
+    padding: 0 20px;
+    border-right: 1px solid #ddd;
+    position: relative;
+    cursor: pointer;
+}
+
+.intro-menu__item:last-child{
+    border-right: none;
+}
+
+.intro-menu__item::before{
+    content: "";
+    position: absolute;
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--brown-color);
+    height: calc(100% + 62px);
+    width: calc(100% + 12px);
+    animation: opacity ease-in 0.15s;
+    display: none;
+}
+
+.intro-menu__item::after {
+    content: "";
+    position: absolute;
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-top: 1px solid var(--white-color);
+    border-bottom: 1px solid var(--white-color);
+    height: calc(100% + 40px);
+    width: calc(100% + 12px);
+    zoom: 100%;
+    transition: height 0.3s ease ;
+}
+
+@keyframes opacity {
+    from{
+        opacity: 0.6;
+    }
+    to{
+        opacity: 0.8;
+    }
+}
+
+.intro-menu__item:hover::before{
+    display: block;
+    visibility: visible;
+}
+.intro-menu__item:hover::after{
+    visibility: visible;
+    height: calc(100% + 50px);
+
+}
+
+.intro-menu__item:hover .intro-menu__item-link *
+{
+    color: var(--white-color);
+    animation: opacity ease-in 0.15s;
+}
+
+.intro-menu__item-link{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.intro-menu__item-link i{
+    font-size: 4rem;
+    color: var(--blue-color);
+    margin-right: 20px;
+    z-index: 1;
+}
+
+.intro-menu__item-link span{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--text-color);
+    z-index: 1;
+}
+
+.content__intro-slogan--detail{
+    font-size: 1.65rem;
+    line-height: 2.2rem;
+    font-family: 'Times New Roman', Times, serif ;
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+    margin-top: 40px;
+    color: var(--text-color);
+}
+
+.content__vinhome-project{
+    background-color: var(--primary-color-border);
+    padding: 50px 0;
+}
+
+.vinhome__newest-project {
+    margin-bottom: 40px;
+}
+
+.newest-project--desc{
+    position: relative;
+    z-index: 0;
+}
+
+.newest-project--desc h1{
+    font-size: 3.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--blue-color);
+    margin:0 0 20px;
+    line-height: 3.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.newest-project--desc p{
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    max-width: 506px;
+    margin: 0 0 30px;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.newest-project--desc span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 150px;
+    line-height: 100%;
+    color: #F0E0C6;
+    transition: 0.5s;
+}
+
+.view-all-project{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    color: var(--blue-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.6rem;
+    padding: 6px 28px;
+    border-radius: 3px;
+    background-color: transparent;
+    border: 1px solid var(--blue-color);
+    cursor: pointer;
+}
+
+.vinhome__project-slider{
+    display: flex;
+    flex-direction: column;
+}
+
+.vinhome__current-project-wrapper{
+    display: flex;
+}
+
+.vinhome__current-project--content{
+    max-width: 100%;
+    padding: 40px 30px;
+    background-color: var(--white-color);
+    position: relative;
+}
+
+.current-project__content-slogan{
+    font-size: 1.35rem;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 2rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.current-project__content-heading{
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--brown-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.current-project__content-desc{
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--desc-color);
+}
+
+.current-project__content-link{
+    position: absolute;
+    left: 30px;
+    bottom: 40px;
+    text-decoration: none;
+    color: var(--blue-color);
+    background-color: transparent;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 3px;
+    display: block;
+    border: 1px solid var(--blue-color);
+}
+
+.vinhome__current-project--img{
+    
+}
+
+.vinhome__current-project--img img{
+    max-width: 100%;
+    border-right: 10px solid var(--brown-color);
+    vertical-align: bottom ;
+}
+
+.vinhome__next-project{
+    margin: auto;
+    margin-top: 50px;
+    font-size: 0.8rem;
+}
+
+.vinhome__next-project-dot{
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #DCA447;
+    opacity: 0.4;
+}
+
+.neiborhood{
+    background-color: #F5F1E6;
+    padding: 30px 0;
+    position: relative;
+}
+
+.neiborhood > span{
+    position: absolute;
+    bottom: 78%;
+    left: 0;
+    font-size: 15rem;
+    width: 100%;
+    line-height: 100%;
+    font-weight: 500;
+    color: #EFEADC;
+    transition: 0.5s;
+}
+
+.neiborhood__header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.neiborhood__header-img{
+    margin: 40px 0 5px;
+   text-align: center;
+   z-index: 1;
+}
+
+.neiborhood__header-heading{
+    font-size: 3.7rem;
+    color: var(--blue-color);
+    font-weight: 600;
+   text-align: center;
+   margin-bottom: 60px;
+   position: relative ;
+   z-index: 1;
+}
+
+.neiborhood__header-desc{
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+.neiborhood__content{
+
+}
+
+.neiborhood__content-list{
+    margin: 0;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.neiborhood__content-item{
+    background-color: var(--white-color);
+    box-shadow: 0 1px 30px rgba(0,0,0,0.1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+}
+
+.neiborhood__content-item:nth-child(2){
+    margin: 0 30px;
+}
+
+.neiborhood__content-item:hover 
+.neiborhood__wrapper-img {
+    height: 160px;
+}
+
+.neiborhood__wrapper-img{
+   height: 240px;
+   transition: 0.3s;
+}
+
+.neiborhood_item-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.neiborhood__content-item:hover
+.neiborhood__content-text{
+    background-color: var(--primary-color-border);
+    flex: 1;
+    color: var(--brown-color);
+} 
+
+.neiborhood__content-text{
+    padding: 40px;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #222;
+    overflow: hidden;
+}
+
+.neiborhood__content-item:hover
+.neiborhood__content-text span{
+    color: var(--text-color);
+}
+
+.neiborhood__content-text span{
+    font-size: 1.5rem;
+    color: #979797;
+}
+
+.neiborhood__content-text h4{
+    height: 64px;
+    line-height: 3rem;
+    margin: 0;
+}
+
+.neiborhood__content-item:hover
+.neiborhood__content-desc{
+    height: 80px;
+}
+
+.neiborhood__content-desc{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: var(--text-color);
+    font-weight: initial;
+    margin-top: 10px;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    transition: 0.3s;
+    height: 0;
+}
+
+.neiborhood__content--view-more{
+    width:fit-content ;
+    margin: auto;
+}
+
+.neiborhood__content--view-more button{
+    width: 200px;
+    height: 45px;
+    background-color: var(--brown-color);
+    border: none;
+    font-size: 1.45rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.utilities{
+
+}
+
+.utilities__container{
+    display: flex;
+    background-color: #162B75;
+}
+
+.utilities_content{
+    display: flex;
+}
+
+.utilitis__text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--white-color);
+    padding: 0 15px;
+}
+
+.utilities__slogan{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.utilities_title{
+    font-size: 2.3rem;
+    line-height: 2.5rem;
+    color: var(--brown-color);
+    margin: 20px 0;
+}
+
+.utilities__desc{
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    text-align: justify;
+}
+
+.utilities__wrapper-img{
+    display: inline-block;
+}
+
+.utilities__img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+.utilities__swiper{
+    height: 0;
+}
+
+.utilities__bullet{
+    display: inline-block;
+}
+
+.utilities__swiperdot{
+    color: var(--brown-color);
+    position: relative;
+    font-size: 0.8rem;
+    bottom: 50px;
+    left: 140px;
+}
+
+.utilities__swiperdot svg{
+    position: absolute;
+    top: calc(50% - 1px);
+    left: calc(50% + 0.1px);
+    transform: translate(-50%,-50%);
+}
+
+.footer{
+    background-color: var(--primary-color);
+}
+
+.footer__container{
+    padding: 70px 0 44px;
+}
+
+.footer__menu{
+    display: flex;
+    line-height: 24px;
+}
+
+.footer__menu-list{
+    padding: 0 15px;
+}
+
+.footer__menu-heading{
+    margin: 0 0 15px;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.footer__menu-item{
+    margin: 0 0 15px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: block;
+}
+
+.footer__menu-link{
+    text-decoration: none;
+    color: #0C1C5B;
+}
+
+.footer__option{
+    margin: 0;
+    height: 0;
+    padding-left: 15px;
+    position: relative;
+    display: block;
+    transition: 0.2s;
+    overflow: hidden;
+}
+
+.footer__option:hover{
+    height: 63px;
+    display: block;
+    overflow: visible;
+}
+
+.footer__option::before{
+    content: "";
+    width: 135px;
+    height: 25px;
+    position: absolute;
+    display: block;
+    top: -24px;
+    left: 15px;
+    background-color: transparent;
+}
+
+.footer__option-item{
+    list-style: none;
+    margin-top: 15px;
+}
+
+.footer__option-item--link{
+    text-decoration: none;
+    display: block;
+    color: #0C1C5B;
+    font-size: 1.5rem;
+    font-weight: initial;
+}
+
+.footer__menu-icon{
+    font-size: 1.6rem;
+    color: var(--brown-color);
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+.footer__menu-icon:hover{
+    transform: rotate(-180deg);
+    transition: 0.2s;
+}
+
+.footer__menu-icon:hover ~ .footer__option{
+    display: block;
+    height: 63px;
+    overflow: visible;
+}
+
+.footer__containter-division{
+    margin: 45px 0 30px;
+    text-align: center;
+    position: relative;
+}
+
+.footer__line-division{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    border-top: 1px solid var(--text-color);
+    transform: translateX(5%);
+}
+
+.footer__social-network{
+    font-size: 2.2rem;
+    display: inline-block;
+    background-color: var(--primary-color);
+    z-index: 1;
+    position: relative;
+}
+
+.footer__vinhome-info{
+    display: flex;
+}
+
+.footer__facebook{
+    padding: 0 5px 0 30px;
+}
+
+.footer__facebook:hover{
+    color: #1178F2;
+}
+
+.footer__youtube{
+    padding: 0 10px;
+}
+
+.footer__youtube:hover{
+    color: #FF0000;
+}
+
+.footer__instagram{
+    padding: 0 30px 0 5px;
+}
+
+.footer__instagram:hover{
+    color: #8241C7;
+}
+
+.vinhome__info-logo{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 37px;
+}
+
+.vinhome__logo{
+    margin: 0 70px 0 30px;
+}
+
+.vinhome__logo-img{
+
+}
+
+.vinhome__info-detail{
+    font-size: 1.3rem;
+    color: #444;
+}
+
+.vinhome__address{
+    margin-bottom: 12px;
+}
+
+.vinhome__contact{
+    width: 270px;
+    height: 45px;
+    background-color: var(--brown-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.vinhome__contact::after{
+    content: "";
+    border-right: 1px solid var(--white-color);
+    top: 50%;
+    right: 50%;
+    height: 70%; 
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.vinhome__contact a{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+.vinhome__languague-option{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.vinhome__languague-option-desc{
+    margin-right: 15px;
+}
+
+.vinhome__choose-vietnames{
+    font-weight: bold;
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+.line-seperate{
+    height: 20px;
+    font-size: 2rem;
+    margin: 0 7px;
+}
+
+.vinhome__choose-english{
+    font-size: 1.2rem;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.vinhome__languague-choosen{
+    color: var(--text-color);
+    opacity: 1;
+}
+
+.vinhome__about-copyright{
+    text-align: justify;
+    display: inline-block;
+    width: calc(100% - 190px);
+    margin-right: auto;
+}
+
+.register-receive-news{
+
+}
+
+.register-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form{
+
+}
+
+.enter-infor::placeholder{
+    color: #bbb;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.accept-register{
+    background-color: var(--brown-color);
+    font-size: 1.5rem;
+    color: var(--white-color);
+    margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.register-noted{
+    font-size: 1.2rem;
+    color: #444;
+    margin-top: 15px;
+}
